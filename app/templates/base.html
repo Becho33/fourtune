@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Akari | Japanese Intuitive Readings{% endblock %}</title>
+  <title>{% block title %}Riina Kushu | Japanese Intuitive Readings{% endblock %}</title>
   <meta name="description" content="{% block meta_description %}Personal tarot, astrology, palmistry and Four Pillars readings, offered with warmth and intuition.{% endblock %}">
   <meta property="og:title" content="{{ self.title()|striptags }}">
   <meta property="og:type" content="website">
@@ -15,7 +15,7 @@
 </head>
 <body>
   <header class="site-header" id="top">
-    <a class="brand" href="{{ url_for('main.index') }}" aria-label="Akari home"><img class="brand-logo" src="{{ url_for('static', filename='images/akari-logo.png') }}" alt=""><span><b>AKARI</b><small>INTUITIVE READINGS</small></span></a>
+    <a class="brand" href="{{ url_for('main.index') }}" aria-label="Riina Kushu home"><img class="brand-logo" src="{{ url_for('static', filename='images/akari-logo.png') }}" alt=""><span><b>RIINA KUSHU</b><small>INTUITIVE READINGS</small></span></a>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
     <nav class="nav-links" aria-label="Main navigation">
       <a href="{{ url_for('main.index') }}">Home</a>
@@ -31,13 +31,18 @@
   <main>{% block content %}{% endblock %}</main>
   <footer>
     <div class="footer-main">
-      <a class="brand brand-light" href="{{ url_for('main.index') }}"><img class="brand-logo" src="{{ url_for('static', filename='images/akari-logo.png') }}" alt=""><span><b>AKARI</b><small>INTUITIVE READINGS</small></span></a>
+      <a class="brand brand-light" href="{{ url_for('main.index') }}"><img class="brand-logo" src="{{ url_for('static', filename='images/akari-logo.png') }}" alt=""><span><b>RIINA KUSHU</b><small>INTUITIVE READINGS</small></span></a>
       <div><p class="footer-note">A quiet space for reflection, insight and the path that is yours to choose.</p><a class="instagram-link" href="https://www.instagram.com/RIINA_FORTUNE_TELLER/" target="_blank" rel="noopener noreferrer" aria-label="Follow Riina Fortune Teller on Instagram"><span aria-hidden="true">◎</span> @RIINA_FORTUNE_TELLER</a></div>
       <div class="footer-links"><a href="{{ url_for('main.services') }}">Readings</a><a href="{{ url_for('main.about') }}">About</a><a href="{{ url_for('main.booking') }}">Book</a><a href="{{ url_for('main.my_booking') }}">My Booking</a><a href="{{ url_for('main.contact') }}">Contact</a><a href="{{ url_for('main.privacy') }}">Privacy</a><a href="{{ url_for('main.admin_login') }}">Admin</a></div>
     </div>
-    <div class="footer-bottom"><span>© {{ 2026 }} Akari. All rights reserved.</span><span>Personal readings — £60</span></div>
+    <div class="footer-bottom"><span>© {{ 2026 }} Riina Kushu. All rights reserved.</span><span>Personal readings — £60</span></div>
     <p class="disclaimer">Readings are offered for personal insight, reflection and entertainment purposes and should not replace professional medical, legal, financial or psychological advice.</p>
   </footer>
+  {% if config.WHATSAPP_NUMBER %}
+  <a class="whatsapp-widget" href="https://wa.me/{{ config.WHATSAPP_NUMBER }}?text={{ 'Hello Riina Kushu, I would like to ask about a reading.'|urlencode }}" target="_blank" rel="noopener noreferrer" aria-label="Chat with Riina Kushu on WhatsApp">
+    <span aria-hidden="true">◉</span><strong>Chat on WhatsApp</strong>
+  </a>
+  {% endif %}
   {% if request.endpoint in ['main.index', 'main.services', 'main.service_detail', 'main.about'] %}
   <div class="modal" id="enquiryModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
     <div class="modal-card"><button class="modal-close" aria-label="Close">×</button><div class="modal-symbol">☾</div><div id="modalContent"><p class="eyebrow">A gentle invitation</p><h2 id="modalTitle">Would You Like to Talk?</h2><p>If you are interested in a reading but are not quite ready to book, leave your details below. I would be happy to contact you and answer any questions.</p><form id="enquiryForm"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><div class="field"><label for="popupName">Name <small>optional</small></label><input id="popupName" name="name"></div><div class="field-grid"><div class="field"><label for="popupEmail">Email <small>optional</small></label><input id="popupEmail" type="email" name="email"></div><div class="field"><label for="popupPhone">Telephone <small>optional</small></label><input id="popupPhone" name="phone"></div></div><p class="form-error" aria-live="polite"></p><button class="button" type="submit">Please Contact Me <span>↗</span></button><small class="privacy-note">Your details will only be used to respond to your enquiry.</small></form></div></div>

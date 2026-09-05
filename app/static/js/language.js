@@ -1,7 +1,7 @@
 (() => {
   const ja = {
     "INTUITIVE READINGS":"直感リーディング","Home":"ホーム","Readings":"鑑定メニュー","About Me":"私について","About":"私について","Contact":"お問い合わせ","My Booking":"予約確認","Book":"予約する","Book a Reading":"鑑定を予約","Privacy":"プライバシー","Admin":"管理者",
-    "Tarot · Astrology · Palmistry · BaZi":"タロット・占星術・手相・四柱推命","Guidance for the":"これからの道を照らす","Path Ahead":"導き","Discover insight, clarity and a deeper connection with yourself through traditional spiritual practices and intuitive guidance.":"伝統的なスピリチュアルの知恵と直感的な導きを通して、気づきと明晰さ、そして自分自身との深いつながりを見つけてください。","Explore readings":"鑑定メニューを見る","Personal. Private.":"あなただけの、プライベートな時間。","Approached with care.":"心を込めて向き合います。","Akari":"あかり","Intuitive guide":"直感の案内人","Scroll to discover":"詳しく見る",
+    "Tarot · Astrology · Palmistry · BaZi":"タロット・占星術・手相・四柱推命","Guidance for the":"これからの道を照らす","Path Ahead":"導き","Discover insight, clarity and a deeper connection with yourself through traditional spiritual practices and intuitive guidance.":"伝統的なスピリチュアルの知恵と直感的な導きを通して、気づきと明晰さ、そして自分自身との深いつながりを見つけてください。","Explore readings":"鑑定メニューを見る","Personal. Private.":"あなただけの、プライベートな時間。","Approached with care.":"心を込めて向き合います。","Riina Kushu":"リーナ・クシュ","Intuitive guide":"直感の案内人","Scroll to discover":"詳しく見る",
     "When you find yourself at a crossroads":"人生の岐路に立ったとき","A quiet moment to":"心の声に耳を澄ます","listen within":"静かなひととき","Life can leave us with questions about love, work, change—or simply which way to turn next.":"恋愛、仕事、変化、そして次に進むべき道。人生には迷いが生まれることがあります。","Each reading is a space to pause, reflect and see your circumstances from a new perspective. My role is not to decide your path, but to help illuminate the possibilities already waiting within you.":"鑑定は立ち止まり、振り返り、今の状況を新しい視点から見つめるための時間です。あなたの道を決めるのではなく、あなたの中にすでにある可能性を照らすことが私の役目です。","My approach":"私の鑑定について",
     "Four paths to insight":"気づきへ導く4つの方法","Choose the reading that":"あなたの心に響く","speaks to you":"鑑定を選んでください","Every person arrives with a different question. Follow the practice that feels most natural to you.":"抱えている問いは一人ひとり異なります。あなたが最も自然に感じる鑑定をお選びください。","Personal reading":"個人鑑定","Explore All Readings":"すべての鑑定を見る",
     "Tarot Reading":"タロット鑑定","Astrology Reading":"占星術鑑定","Palmistry Reading":"手相鑑定","Four Pillars of Destiny":"四柱推命","Symbol · Intuition · Reflection":"象徴・直感・内省","Pattern · Potential · Timing":"パターン・可能性・タイミング","Character · Change · Direction":"性質・変化・方向性","Balance · Cycles · Opportunity":"調和・周期・好機",
@@ -18,7 +18,7 @@
     "Private administration":"管理者専用","Admin Sign In":"管理者ログイン","Admin password":"管理者パスワード","Sign In":"ログイン","Bookings":"予約一覧","Sign Out":"ログアウト","Email":"メール","Telephone":"電話番号","Preferred":"希望日時","Birth details":"出生情報","Update status":"ステータスを更新","Update":"更新","No bookings yet":"予約はまだありません","New reading requests will appear here.":"新しい鑑定依頼がここに表示されます。","Not provided":"未入力","No date":"日付なし","New":"新規","Contacted":"連絡済み","Confirmed":"確定","Completed":"完了","Cancelled":"キャンセル","Message received":"メッセージを受け付けました","Thank You":"ありがとうございます","Thank you for getting in touch. I have received your details and will contact you shortly.":"お問い合わせありがとうございます。内容を受け付けました。近日中にご連絡いたします。","Please provide an email address or telephone number.":"メールアドレスまたは電話番号を入力してください。","Please enter a valid email address.":"有効なメールアドレスを入力してください。","Please check your details.":"入力内容をご確認ください。","Something went wrong. Please try again.":"問題が発生しました。もう一度お試しください。","No booking matched that reference and email address.":"受付番号とメールアドレスが一致する予約は見つかりませんでした。","Incorrect admin password.":"管理者パスワードが正しくありません。","You have been signed out.":"ログアウトしました。","That status could not be applied.":"ステータスを更新できませんでした。","Thank you for your message. I will contact you shortly.":"メッセージありがとうございます。近日中にご連絡いたします。"
   };
 
-  const titleJa = {"Akari | Japanese Intuitive Readings":"あかり｜直感リーディング","Readings | Akari":"鑑定メニュー｜あかり","About Akari | Japanese Intuitive Reader":"あかりについて｜直感リーダー","Book a Reading | Akari":"鑑定予約｜あかり","Contact | Akari":"お問い合わせ｜あかり","Privacy | Akari":"プライバシー｜あかり","View My Booking | Akari":"予約確認｜あかり","Admin Sign In | Akari":"管理者ログイン｜あかり","Manage Bookings | Akari":"予約管理｜あかり"};
+  const titleJa = {"Riina Kushu | Japanese Intuitive Readings":"リーナ・クシュ｜直感リーディング","Readings | Riina Kushu":"鑑定メニュー｜リーナ・クシュ","About Riina Kushu | Japanese Intuitive Reader":"リーナ・クシュについて｜直感リーダー","Book a Reading | Riina Kushu":"鑑定予約｜リーナ・クシュ","Contact | Riina Kushu":"お問い合わせ｜リーナ・クシュ","Privacy | Riina Kushu":"プライバシー｜リーナ・クシュ","View My Booking | Riina Kushu":"予約確認｜リーナ・クシュ","Admin Sign In | Riina Kushu":"管理者ログイン｜リーナ・クシュ","Manage Bookings | Riina Kushu":"予約管理｜リーナ・クシュ"};
   const textNodes = [];
   const attributes = [];
   const skip = new Set(["SCRIPT", "STYLE", "NOSCRIPT"]);
@@ -47,7 +47,7 @@
       node.nodeValue = original.replace(trimmed, translate(trimmed));
     });
     attributes.forEach(([el, attr, original]) => el.setAttribute(attr, isJa ? translate(original) : original));
-    document.title = isJa ? (titleJa[originalTitle] || originalTitle.replace(" | Akari", "｜あかり")) : originalTitle;
+    document.title = isJa ? (titleJa[originalTitle] || originalTitle.replace(" | Riina Kushu", "｜リーナ・クシュ")) : originalTitle;
     const toggle = document.querySelector(".language-toggle");
     toggle?.setAttribute("aria-label", isJa ? "言語を英語に切り替える" : "Switch language to Japanese");
     localStorage.setItem("akariLanguage", isJa ? "ja" : "en");

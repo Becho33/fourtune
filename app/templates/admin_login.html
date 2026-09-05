@@ -1,2 +1,2 @@
-{% extends "base.html" %}{% block title %}Admin Sign In | Akari{% endblock %}
+{% extends "base.html" %}{% block title %}Admin Sign In | Riina Kushu{% endblock %}
 {% block content %}<section class="page-hero compact"><p class="eyebrow light">Private administration</p><h1>Admin Sign In</h1></section><section class="lookup-section"><form method="post" class="main-form login-form" novalidate>{{ form.hidden_tag() }}<div class="field">{{ form.password.label }}{{ form.password(autocomplete="current-password") }}{% for e in form.password.errors %}<small class="error">{{ e }}</small>{% endfor %}</div>{{ form.submit(class="button button-dark") }}</form></section>{% endblock %}

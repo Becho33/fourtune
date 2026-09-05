@@ -1,5 +1,6 @@
 from functools import wraps
 import hmac
+import smtplib
 
 from flask import Blueprint, current_app, flash, jsonify, redirect, render_template, request, session, url_for
 from sqlalchemy.exc import SQLAlchemyError
@@ -7,6 +8,7 @@ from sqlalchemy.exc import SQLAlchemyError
 from app import db
 from app.forms import AdminLoginForm, BookingForm, BookingLookupForm, BookingStatusForm, ContactForm, SERVICES
 from app.models import Booking, Enquiry
+from app.notifications import send_booking_notification
 
 main = Blueprint("main", __name__)
 
@@ -57,6 +59,10 @@ def booking():
     if form.validate_on_submit():
         booking = Booking(name=form.name.data, email=form.email.data, phone=form.phone.data, service=form.service.data, preferred_date=form.preferred_date.data, preferred_time=form.preferred_time.data, birth_date=form.birth_date.data, birth_time=form.birth_time.data, birth_place=form.birth_place.data, message=form.message.data)
         db.session.add(booking); db.session.commit()
+        try:
+            send_booking_notification(booking)
+        except (OSError, smtplib.SMTPException):
+            current_app.logger.exception("Booking saved, but notification email could not be sent")
         flash(f"Thank you. Your booking reference is #{booking.id}. Keep this number to view your request later.", "success")
         return redirect(url_for("main.booking"))
     return render_template("booking.html", form=form)
